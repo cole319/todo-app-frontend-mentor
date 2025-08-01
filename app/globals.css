@@ -36,6 +36,10 @@
   --purple-700: hsl(233, 14%, 35%);
   --purple-800: hsl(237, 14%, 26%);
   --gray-600: hsl(236, 9%, 61%);
+
+  /* Font Family */
+
+  --font-josefin-custom: var(--font-josefin-sans);
 }
 
 @media (prefers-color-scheme: dark) {
