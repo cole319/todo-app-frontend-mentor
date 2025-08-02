@@ -1,4 +1,5 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 
 export default function TodoTable() {
   return (
@@ -14,7 +15,9 @@ export default function TodoTable() {
         />
       </div>
 
-      <div className="min-h-[10rem] w-full bg-slate-50 rounded-t-md"></div>
+      <div className="w-full bg-slate-50 rounded-t-md">
+        <p className="py-[1rem] text-center text-slate-400">No todos yet...</p>
+      </div>
     </div>
   );
 }
