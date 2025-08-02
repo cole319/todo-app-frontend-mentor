@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 
 export default function TodoTable() {
+  const [todos, setTodos] = useState(0);
+
   return (
     <div className="flex flex-col gap-[1.5rem] text-slate-700 w-[38%] text-xl">
       <div className=" bg-slate-50 flex justify-center items-center gap-[1rem] rounded-md h-[4.2rem]">
@@ -16,7 +20,13 @@ export default function TodoTable() {
       </div>
 
       <div className="w-full bg-slate-50 rounded-t-md">
-        <p className="py-[1rem] text-center text-slate-400">No todos yet...</p>
+        {todos == 0 ? (
+          <p className="py-[1rem] text-center text-slate-400">
+            No todos yet...
+          </p>
+        ) : (
+          <TodoItem />
+        )}
       </div>
     </div>
   );
